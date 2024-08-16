@@ -51,7 +51,7 @@ app.post("/", async (req, res) => {
   
   app.get("/:pid", async (req,res) => {
     const pid = req.params.pid
-    const limit = 1;
+    const limit = 3;
     const skip = (pid - 1) * limit;
     const total = await productModel.countDocuments({});
     const products = await productModel.find({}).skip(skip).limit(limit);
