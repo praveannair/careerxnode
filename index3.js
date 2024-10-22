@@ -9,12 +9,15 @@ const getCity = (req, res, next) => {
 // app.post("/", (req, res) => {
 //   res.json(req.body);
 // });
-app.post("/city", getCity, (req, res) => {
+
+app.post("/city", (req, res) => {
   res.json(req.body);
 });
+
 app.post("/country", getCity, (req, res) => {
   res.json(req.body);
 });
+
 app.post("/state", (req, res) => {
     res.json(req.body);
   });
